@@ -75,13 +75,17 @@ WSGI_APPLICATION = "mysite.wsgi.application"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
+    # "default": {
+    #     "ENGINE": "django.db.backends.postgresql",
+    #     "NAME": "SitesDB",
+    #     "USER": "postgres",
+    #     "PASSWORD": "b7v9m34",
+    #     "HOST": "localhost",
+    #     "PORT": "",
+    # }
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "SitesDB",
-        "USER": "postgres",
-        "PASSWORD": "b7v9m34",
-        "HOST": "localhost",
-        "PORT": "",
+        "OPTIONS": {"service": "MySiteServerDB", "passfile": "pgpass.conf"},
     }
 }
 
